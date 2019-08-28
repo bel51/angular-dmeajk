@@ -19,7 +19,7 @@ liste: Array<number> ;
   zaehle(){
     this.liste = [];
 
-    for(let i = 0; i <= this.ende; i=i+1){
+    for(let i = 0; i <= this.ende; i++){
       this.liste.push(i);
     }
    this.liste = this.liste.reverse();
