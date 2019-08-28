@@ -1,18 +1,27 @@
-<div class="container">
-<div class="row">
- <h1>Listen erstellen</h1>
+<h1>Listen erstellen</h1>
 
-  <div class="input-group input-group-sm mb-3">
-    <div class="input-group-prepend">
+<div class="container">
+	<div class="row">
+		<div class="col-4">
       <span class="input-group-text" id="inputGroup-sizing-sm">Zähle von 0 bis</span>
     </div>
-    <input type="number" [(ngModel)]="ende" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" >
-    <div class="input-group-append">
+    <div class="col-6">
+      <input type="number" [(ngModel)]="ende" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"placeholder="Zahl" >
+    </div>
+    <div class="col-1">
       <button (click)="zaehle()"class="btn btn-outline-success" type="button" id="button-addon2">Los</button>
-   </div>
-   
-   
+    </div>
   </div>
-  {{liste}}
-</div>
+
+
+	<div class="row">
+		<div class="col-12">
+		
+      <ul *ngFor="let zahl of liste">
+      <li>{{zahl}}</li>
+      </ul>
+    </div>
+ 
+ </div>
+
 </div>

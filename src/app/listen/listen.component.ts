@@ -6,8 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./listen.component.css']
 })
 export class ListenComponent implements OnInit {
-ende:number = 10;
-liste: Array<number> = [1,2];
+ende:number ;
+liste: Array<number> ;
 
   constructor() {
     
@@ -22,6 +22,9 @@ liste: Array<number> = [1,2];
     for(let i = 0; i <= this.ende; i=i+1){
       this.liste.push(i);
     }
+   this.liste = this.liste.reverse();
+
+    this.liste.pop();
   }
 
 
